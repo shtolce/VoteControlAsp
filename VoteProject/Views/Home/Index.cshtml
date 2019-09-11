@@ -30,42 +30,4 @@
     </div>
 </div>
 
-<!-- в отдельный вью-->
-<div class="modal fade" id="modalNegative" tabindex="-1" role="dialog" aria-labelledby="modalNegativeLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <img src="~/images/titleModalNegative.png" style="background-color:transparent;margin-bottom:-20px">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title text-center" id="modalNegativeLabel">Пожалуйста, укажите причину.</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="w-100">
-                    <button type="button" class="btn btn-warning modal-content__modal-body__button">1) Долго стоял в очереди</button>
-                </div>
-                <div class="w-100">
-                    <button type="button" class="btn btn-warning modal-content__modal-body__button modal-content__modal-body__button">2) Не порнавилось обслуживание</button>
-                </div>
-                <div class="w-100">
-                    <button type="button" class="btn btn-warning modal-content__modal-body__button modal-content__modal-body__button">3) Укажите свой вариант</button>
-                </div>
-                <div class="modal-footer">
-                    <div class="w-100">
-                        <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Закрыть</button>
-                    </div>
-                </div>
-            </div>
-    </div>
-</div>
-<!-- в отдельный в ью -->
-<!-- в отдельный script-->
-<script>
-    $('.voteControl div').on('click', function () {
-        $('#myInput').trigger('focus')
-    })
-
-
-</script>
-<!-- в отдельный script-->
+@Html.Partial("modalControl");

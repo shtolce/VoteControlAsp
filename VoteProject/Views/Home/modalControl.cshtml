@@ -1,0 +1,110 @@
+﻿<div class="modal fade" id="modalNegative" tabindex="-1" role="dialog" aria-labelledby="modalNegativeLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <img src="~/images/titleModalNegative.png" style="background-color:transparent;margin-bottom:-20px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center" id="modalNegativeLabel">Пожалуйста, укажите причину.</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="w-100">
+                    <button type="button" class="btn btn-warning modal-content__modal-body__button"
+                            data-dismiss="modal"
+                            data-toggle="modal" data-target="#modalClientData">
+                        1) Долго стоял в очереди
+                    </button>
+                </div>
+                <div class="w-100">
+                    <button type="button" class="btn btn-warning modal-content__modal-body__button"
+                            data-dismiss="modal"
+                            data-toggle="modal" data-target="#modalClientData">
+                        2) Не порнавилось обслуживание
+                    </button>
+                </div>
+                <div class="w-100">
+                    <button type="button" class="btn btn-warning modal-content__modal-body__button modal-content__modal-body__button"
+                            data-dismiss="modal"
+                            data-toggle="modal" data-target="#modalMessageData">
+                        3) Укажите свой вариант
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <div class="w-100">
+                        <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalClientData" tabindex="-1" role="dialog" aria-labelledby="modalClientDataLabel" aria-hidden="true">
+    <form class="w-30">
+        <div class="modal-dialog" role="document">
+            <img src="~/images/titleModalNegative.png" style="background-color:transparent;margin-bottom:-20px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center" id="modalClientDataLabel">Пожалуйста, укажите свой телефон и ФИО.</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input class="form-control modal-content__modal-body__inputFIO input-lg" type="text" placeholder="FIO">
+                        <input class="form-control  bfh-phone modal-content__modal-body__inputPhone input-lg"
+                               data-format="+7 (ddd) ddd-dddd" type="text">
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-warning modal-content__modal-body__button modal-content__modal-body__button">Отправить отзыв</button>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="w-100">
+                            <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>>
+</div>
+
+<div class="modal fade" id="modalMessageData" tabindex="-1" role="dialog" aria-labelledby="modalMessageDataLabel" aria-hidden="true">
+    <form class="w-30">
+        <div class="modal-dialog" role="document">
+            <img src="~/images/titleModalNegative.png" style="background-color:transparent;margin-bottom:-20px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center" id="modalMessageDataLabel">Введите свои пожелания.</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <textarea class="form-control modal-content__modal-body__inputMessage" value="" rows="10"></textarea>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-warning modal-content__modal-body__button "
+                            data-dismiss="modal"
+                            data-toggle="modal" data-target="#modalClientData">
+                            Отправить отзыв
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="w-100">
+                            <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>>
+</div>
+
+
+<script>
+
+
+</script>
