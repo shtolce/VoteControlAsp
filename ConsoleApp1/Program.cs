@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Net;
 using System.Net.Mail;
+using System.Web;
 
 namespace ConsoleApp1
 {
@@ -10,6 +11,7 @@ namespace ConsoleApp1
 
     class Program
     {
+        /*
         public static void sendCallBack(object sender, AsyncCompletedEventArgs e){
             String token = (string)e.UserState;
             if (e.Cancelled)
@@ -44,6 +46,16 @@ namespace ConsoleApp1
             Console.ReadKey();
 
         }
+        */
+
+        static void Main(string[] args)
+        {
+            string s = "%u0412%u0435%u043B%u0438%u043A%u0438%u0439 %u0424%u0438%u043B%u043B%u0438%u0430%u043B";
+            string s1 = HttpUtility.UrlDecode(s);
+            Console.WriteLine(s1);
+            Console.ReadKey();
 
         }
+
     }
+}

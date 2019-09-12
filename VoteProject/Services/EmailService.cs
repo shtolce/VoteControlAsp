@@ -37,10 +37,10 @@ namespace VoteProject.Services
             }
         }
 
-        public void Send(string FIO,string tel,string comment,string commentAlt) {
+        public void Send(string FIO,string tel,string comment,string commentAlt, string fillial) {
             _mailMessage.Subject = "Unacceptable rate";
             _mailMessage.Body = $@"<h2>Dear Premium Bank, 
-                                    You received from 'Baş ofis' branch on 'Xidmət səviyyəsi service'.
+                                    You received from {fillial} branch on 'Xidmət səviyyəsi service'.
                                   </h2>
                                    <p>Mark: {comment}</p>
                                    <p>Mark page: {commentAlt}</p>
@@ -58,7 +58,7 @@ namespace VoteProject.Services
                                     ";
             _mailMessage.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
-            smtp.Credentials = new NetworkCredential("testerS123456", "testerS1234567");
+            smtp.Credentials = new NetworkCredential("testerS1234567", "testerS12345678");
             smtp.EnableSsl = true;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.SendCompleted += new SendCompletedEventHandler(sendCallBack);

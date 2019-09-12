@@ -7,6 +7,6 @@ namespace VoteProject.Services
 {
     public interface IMessageSender
     {
-        void Send(string FIO,string Tel,string message, string messageAlt);
+        void Send(string FIO,string Tel,string message, string messageAlt,string fillial);
     }
 }
