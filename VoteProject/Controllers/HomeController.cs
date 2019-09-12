@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using VoteProject.Models;
+using VoteProject.Services;
 
 namespace VoteProject.Controllers
 {
@@ -17,8 +18,10 @@ namespace VoteProject.Controllers
         }
 
         [HttpPost]
-        public JsonResult SendData(VoteData data)
+        public JsonResult SendData([FromBody] VoteData data,[FromServices] IMessageSender mail)
         {
+            mail.Send(data.FIO,data.phone,data.message,data.message);
+
             return Json(data);
         }
 

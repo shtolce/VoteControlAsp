@@ -33,9 +33,21 @@ function sendToAjax() {
         "FIO": FIOText 
     }
 
-    $.post("/home/SendData", data2, function (data) {
-        console.log(data);
+    jQuery.ajax({
+        url: "/home/SendData",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify(data2),
+        success: function (data) {
+            console.log(data);
+        }
     });
+
+
+//    $.postJSON("/home/SendData", data2, function (data) {
+//        console.log(data);
+//    });
 
 
 

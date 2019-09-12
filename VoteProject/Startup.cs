@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using VoteProject.Services;
 
 namespace VoteProject
 {
@@ -31,6 +32,7 @@ namespace VoteProject
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors();
+            services.AddTransient<IMessageSender>((e)=> { return new EmailService("kimdimka@yandex.ru", "kimdimka@inbox.ru"); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
