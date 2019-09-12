@@ -40,7 +40,7 @@ function sendToAjax() {
         dataType: "json",
         data: JSON.stringify(data2),
         success: function (data) {
-            console.log(data);
+            //console.log(data);
         }
     });
 
@@ -67,7 +67,7 @@ function sendData() {
 
 function clickEvent() {
     fillDataClient();
-    alert(messageText + ' ' + phoneText + ' ' + FIOText);
+    //alert(messageText + ' ' + phoneText + ' ' + FIOText);
     sendData();
     $('#modalClientData').modal('hide');
 }
