@@ -58,7 +58,7 @@ namespace VoteProject.Services
                                     ";
             _mailMessage.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
-            smtp.Credentials = new NetworkCredential("testerS1234567", "testerS12345678");
+            smtp.Credentials = new NetworkCredential("testerS12345678", "testerS123456789");
             smtp.EnableSsl = true;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.SendCompleted += new SendCompletedEventHandler(sendCallBack);

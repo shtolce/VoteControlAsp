@@ -1,0 +1,54 @@
+﻿@model VoteProject.ViewModels.LoginModel
+
+
+<div class="row">
+    <div class="col-xs-3"> </div>
+    <div class="col-xs-6">
+        <h2>Инициализация настроек филлиала </h2>
+
+        <form asp-action="Login" asp-controller="Home" asp-anti-forgery="true">
+            <div class="validation" asp-validation-summary="ModelOnly" />
+            <div>
+                <div class="form-group">
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label asp-for="Login">Введите идентификатор филлиала</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" asp-for="Login" class="form-control modal-content__modal-body__inputFIO input-lg"/>
+                            <span asp-validation-for="Login" />
+                        </div>
+                        <div class="col-xs-3"> </div>
+
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label asp-for="Password">Введите пароль</label>
+                        </div>
+                        <div class="col-xs-6">
+                            <input asp-for="Password" class="form-control modal-content__modal-body__inputFIO input-lg" />
+                            <span asp-validation-for="Password" />
+                        </div>
+                        <div class="col-xs-3"> </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Войти в систему" class="btn btn-warning" />
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+    <div class="col-xs-3"> </div>
+
+</div>
+
+
+
